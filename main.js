@@ -19,7 +19,7 @@ function showCongratulations() {
         const heart = document.createElement('div');
         heart.classList.add('heart');
         heart.style.left = Math.random() * window.innerWidth + 'px'; // Vị trí ngang ngẫu nhiên
-       heart.style.animationDelay = Math.random() * 3 + 's';
+         heart.style.animationDelay = Math.random() * 1 + 's';
         heartContainer.appendChild(heart);
         heart.addEventListener('animationend', () => {
                 heart.remove();
@@ -30,5 +30,5 @@ function showCongratulations() {
 
      setTimeout(() => {
        heartContainer.innerHTML = '';
-   }, 5000);
+   }, 10000);
 }
