@@ -19,7 +19,7 @@ function showCongratulations() {
         const heart = document.createElement('div');
         heart.classList.add('heart');
         heart.style.left = Math.random() * window.innerWidth + 'px'; // Vị trí ngang ngẫu nhiên
-        heart.style.top = '0'; // Đặt vị trí top mặc định là 0 (bắt đầu từ trên)
+        heart.style.top = '10'; // Đặt vị trí top mặc định là 0 (bắt đầu từ trên)
        heart.style.animationDelay = Math.random() * 1 + 's';
         heartContainer.appendChild(heart);
         heart.addEventListener('animationend', () => {
