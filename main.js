@@ -15,20 +15,19 @@ function showCongratulations() {
     const heartContainer = document.querySelector('.heart-container');
     heartContainer.innerHTML = ''; // Xóa các trái tim cũ nếu có
     const numHearts = 40; // Số lượng trái tim
-    for (let i = 0; i < numHearts; i++) {
-        const heart = document.createElement('div');
-        heart.classList.add('heart');
-        heart.style.left = Math.random() * window.innerWidth + 'px'; // Vị trí ngang ngẫu nhiên
-        heart.style.top = '0'; // Đặt vị trí top mặc định là 0 (bắt đầu từ trên)
-       heart.style.animationDelay = Math.random() * 1 + 's';
-        heartContainer.appendChild(heart);
-        heart.addEventListener('animationend', () => {
-                heart.remove();
-        });
-    }
+     for (let i = 0; i < numHearts; i++) {
+            const heart = document.createElement('div');
+             heart.classList.add('heart');
+             heart.style.left = Math.random() * window.innerWidth + 'px'; // Vị trí ngang ngẫu nhiên
+             heart.style.top = '-20px'; // Đặt vị trí top ban đầu (để trái tim bắt đầu từ trên)
+            heart.style.animationDelay = Math.random() * 1 + 's';
+            heartContainer.appendChild(heart);
+             heart.addEventListener('animationend', () => {
+                  heart.remove();
+            });
+         }
 
     alert('Chúc mừng! Bạn đã chọn đúng người <3');
-
      setTimeout(() => {
        heartContainer.innerHTML = '';
    }, 10000);
