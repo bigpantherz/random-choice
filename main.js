@@ -12,5 +12,17 @@ function moveContainer() {
 }
 
 function showCongratulations() {
-    alert('Chúc mừng! Bạn đã chọn đúng người <3');
+     const heartContainer = document.querySelector('.heart-container');
+      const heart = document.querySelector('.heart');
+      for (let i = 0; i < 20; i++) {
+            const newHeart = heart.cloneNode(true);
+            newHeart.style.left = Math.random() * window.innerWidth + 'px';
+            newHeart.style.animationDelay = Math.random() * 3 + 's';
+            heartContainer.appendChild(newHeart);
+        }
+       alert('Chúc mừng! Bạn đã chọn trả nợ.');
+        setTimeout(() => {
+            heartContainer.innerHTML = '';
+            heartContainer.appendChild(heart);
+      }, 5000);
 }
