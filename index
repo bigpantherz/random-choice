@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ</title>
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Chào mừng đến với trang web của tôi!</h1>
-    <p>Đây là trang chủ (index.html) của trang web.</p>
+    <h1>Hello</h1>
+    <script src="js/main.js"></script>
 </body>
 </html>
