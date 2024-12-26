@@ -14,20 +14,21 @@ function moveContainer() {
 function showCongratulations() {
     const heartContainer = document.querySelector('.heart-container');
     heartContainer.innerHTML = ''; // Xóa các trái tim cũ nếu có
-     for (let i = 0; i < 100; i++) {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.style.left = Math.random() * window.innerWidth + 'px';
-             heart.style.top = Math.random() * window.innerHeight - 200 + 'px';
-            heart.style.animationDelay = Math.random() * 3 + 's';
-            heartContainer.appendChild(heart);
-             heart.addEventListener('animationend', () => {
-                heart.remove(); // Xóa trái tim khi animation kết thúc
+    const numHearts = 40; // Số lượng trái tim
+    for (let i = 0; i < numHearts; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = Math.random() * window.innerWidth + 'px'; // Vị trí ngang ngẫu nhiên
+       heart.style.animationDelay = Math.random() * 3 + 's';
+        heartContainer.appendChild(heart);
+        heart.addEventListener('animationend', () => {
+                heart.remove();
         });
-     }
+    }
 
     alert('Chúc mừng! Bạn đã chọn đúng người <3');
-    setTimeout(() => {
+
+     setTimeout(() => {
        heartContainer.innerHTML = '';
    }, 5000);
 }
