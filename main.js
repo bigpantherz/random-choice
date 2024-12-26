@@ -12,5 +12,5 @@ function moveContainer() {
 }
 
 function showCongratulations() {
-    alert('Chúc mừng! Bạn đã chọn trả nợ.');
+    alert('Chúc mừng! Bạn đã chọn đúng người <3');
 }
