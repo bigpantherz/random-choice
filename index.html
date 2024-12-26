@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trả nợ một đời cho anh nhé?</title>
+    <title>Trả Nợ</title>
     <style>
         html, body {
             width: 100%;
@@ -47,8 +47,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 100; /* Đảm bảo các trái tim luôn ở trên các phần tử khác */
-            overflow: hidden; /* ẩn các trái tim ra ngoài view port */
+            z-index: 100;
         }
 
         .heart {
@@ -57,7 +56,6 @@
             height: 20px;
             background-color: red;
             transform: rotate(45deg);
-            animation: fall 5s linear forwards;
             pointer-events: none;
         }
 
@@ -95,10 +93,9 @@
 </head>
 <body>
     <div class="heart-container">
-        <div class="heart"></div>
     </div>
     <div id="container">
-        <h1>Trả nợ một đời cho anh nhé?</h1>
+        <h1>Trả nợ?</h1>
         <button id="yes" onclick="showCongratulations()">Có</button>
         <button id="no" onclick="moveContainer()">Không</button>
     </div>
