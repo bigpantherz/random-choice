@@ -41,24 +41,6 @@
             color: white;
         }
     </style>
-    <script>
-        function randomizePosition() {
-            const container = document.getElementById('container');
-            const maxX = window.innerWidth - container.offsetWidth; // Window width minus element width
-            const maxY = window.innerHeight - container.offsetHeight; // Window height minus element height
-
-            const randomX = Math.random() * maxX;
-            const randomY = Math.random() * maxY;
-
-            container.style.position = 'absolute';
-            container.style.left = `${randomX}px`;
-            container.style.top = `${randomY}px`;
-        }
-
-        function showCongratulations() {
-            alert('Chúc mừng! Bạn đã chọn trả nợ.');
-        }
-    </script>
 </head>
 <body>
     <div id="container">
@@ -66,5 +48,11 @@
         <button id="yes" onclick="showCongratulations()">Có</button>
         <button id="no" onclick="randomizePosition()">Không</button>
     </div>
+     <script src="main.js"></script>
+      <script>
+        function showCongratulations() {
+            alert('Chúc mừng! Bạn đã chọn trả nợ.');
+        }
+    </script>
 </body>
 </html>
